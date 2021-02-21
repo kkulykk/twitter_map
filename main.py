@@ -53,4 +53,4 @@ def build_map(coordinates: list):
         layer_map.add_child(folium.Marker(
             location=[i[1][0], i[1][1]], popup=i[0], icon=folium.Icon(color='lightblue')))
     main_map.add_child(layer_map)
-    main_map.save('templates/map.html')
+    return main_map._repr_html_()

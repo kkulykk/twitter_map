@@ -1,5 +1,5 @@
 """
-Main Flask module 
+Main Flask module
 """
 from flask import Flask, render_template, request, redirect
 import twitter_api
@@ -19,11 +19,10 @@ def gen_map():
         nickname = str(request.form["nickname"])
         token = str(request.form["token"])
         try:
-            main.build_map(main.get_coordinates(main.parse_json(
+            return main.build_map(main.get_coordinates(main.parse_json(
                 twitter_api.get_followers(nickname, token))))
         except:
             return redirect('/error')
-        return render_template("map.html")
 
 
 @app.route('/error')
@@ -32,4 +31,4 @@ def error():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
