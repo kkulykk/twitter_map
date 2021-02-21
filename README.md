@@ -4,6 +4,7 @@
 Followers Map is an app to provide map with markers of locations of followers of cetrain user.
 ## How to use
 
+- Run "application.py" or go [here](http://kulyk.pythonanywhere.com)
 - Enter nickname and Bearer Token
 - Click "Find followers"
 - The app will display a map with locations of followers
